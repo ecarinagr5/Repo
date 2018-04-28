@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  input[type="button"] {
+    outline: none;
+  
+  }
+  .maxWidthAvailable {
+    max-width: 1366px;
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .showBlock{
+    display: none;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  html {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    margin: 0 auto;
+  }
+  
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+  }
+  /* HEADER */
+  #header-container {
+    height: 100px;
+    width: 200px;
+    border-radius: 50% / 100% 100% 0 0;
+    background: white;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);  
+    -o-transform: rotate(180deg);
+    position: absolute;
+    left: 42%;
+    top: 0px;
+        z-index: 5;
+    -webkit-box-shadow: 0px 2px 14px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 2px 14px 0px rgba(0,0,0,1);
+    box-shadow: 0px 2px 14px 0px rgba(0,0,0,1);
+  }
+  
+  #header-container img {
+    margin: 30px 60px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);  
+    -o-transform: rotate(180deg);
+  }
+  /* CONTENDIO */
+  #body-container {
+    margin: 0 auto;
+  }
+  .container-sidea {
+    background: #cc2b00;
+    height: 800px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .container-sidea span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    letter-spacing: 2px;
+    color: #752a2a;
+  }
+  .container-sidea hr {
+    width: 60px;
+    margin:60% 0 0 0;
+    border: 0;
+    height: 0;
+    border-top: 1px solid white;
+  }
+  .container-sidea div {
+    font-size: 200px;
+    position: absolute;
+    left:25%;
+    top: 40%;
+    color: #752a2a; /*Eliminar cuando tenga la imagen*/
+  }
+  
+  .container-sideb {
+    background: rgb(186, 186, 186);
+    height: 850px;
+    position: relative;
+    text-align: center;
+  }
+  .container-sideb  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    letter-spacing: 2px;
+    color: gray;
+  }
+  .container-sideb hr {
+    width: 60px;
+    margin:60% 0 0 92%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid white;
+  }
+  .container-sideb div {
+    font-size: 200px;
+    position: absolute;
+    left:25%;
+    top: 40%;
+    color: gray; /*Eliminar cuando tenga la imagen*/
+  }
+  
+  /* FOOTER */
+  
+  #logo-footer {
+    height: 90px;
+    width: 160px;
+    border-radius: 50% / 100% 100% 0 0;
+    background: white;
+    position: absolute;
+        left: 44%;
+        bottom:-32%; 
+        z-index: 9;
+    text-align: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    border: 0px;
+    -webkit-box-shadow: 0px 2px 14px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 2px 14px 0px rgba(0,0,0,1);
+    box-shadow: 0px 2px 14px 0px rgba(0,0,0,1);
+    font-weight: 900;
+    font-style:italic;
+  }
+  #logo-footer span {
+    color:#0a0a9a;
+    font-size: 13px;
+  }
+  #footer-container {   
+    position: absolute;
+    background: white;
+    height: 380px;
+    bottom: -32%;
+    width: 100%;
+    display: none;
+    z-index: 9;
+  }
+  
+  /*Formulario*/
+  div.content-form {
+    backface-visibility: blue;
+    padding: 50px 10px;
+    text-align: left;
+    height: 300px;
+  }
+  div.content-form.sideleft {
+    padding-left: 12%;
+  }
+  div.content-form.sideright {
+    padding-right: 12%;
+  }
+  div.content-form p {
+    color:rgb(140, 140, 140);
+    font-size: 13px;
+    padding: 12px 0px;
+  }
+  #btn-form {
+    text-align: center;
+  }
+  
+  .btn-pruebamanejo {
+    opacity: 1;
+    border-width: 0px;
+    border-radius: 2px;
+    border-color: rgb(53, 126, 189);
+    border-style: solid;
+    background-color: rgb(0, 98, 196);
+    color:white;
+    padding: 15px 80px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  
+  #btn-link {
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  .btn-cotiza {
+    font-size: 13px;
+    color: rgb(0, 98, 196);
+  }
+  .campoladob {
+    padding: 20px 0;
+  }
+  .campoladoc {
+    margin: 20px 0;
+  }
+  .campolado {
+    float:left;
+    width: 50%;
+    padding: 20px 0;
+  }
+  .campolado label, .campo label {
+    color:rgb(140, 140, 140);
+    font-size: 13px;
+    padding: 20px 0;
+  }
+  .campo {
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  input {
+    border: 1px solid rgb(140, 140, 140);
+    margin-top:5px;
+  }
+  
+  select {
+    width: 100%;
+    height: 35px;
+    color:  rgb(140, 140, 140);
+    font-size: 15px;
+    padding-left:10px;
+    margin-top:5px;
+    border: 1px solid rgb(140, 140, 140);
+    background: white;
+    font-weight: 900;
+  }
+  
+  input[name=fname] {
+    width: 220px;
+    height: 35px;
+  
+  }
+  input[type=radio], input[type=checkbox] {
+    width: 20px;
+    float:left;
+  }
+  input, input[name=fapellido] {
+    width: 100%;
+    height: 35px;
+    color:  rgb(0, 95, 198);
+    font-size: 15px;
+    padding-left:10px;
+  }
+  input:focus {
+    border: 1px solid rgb(0, 95, 198);
+    color:  rgb(0, 95, 198);
+    font-size: 15px;
+    padding-left:10px;
+  }
+  .radioBtn {
+    float: left;
+    width: 50%;
+    margin-top: -25px;
+  }
+  .radioBtn label {
+    float:left;
+    padding:17px 0 0 5px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  /*HOME CARS*/
+  .container-shadow {
+    background-image: url(../app/content/img/sombra208.png);
+    background-repeat: no-repeat;
+  }
+  .container-shadowb {
+    background-image: url(../app/content/img/sombra301.png);
+    background-repeat: no-repeat;
+  }
+  .imgCar {
+    display: block;
+    position: absolute;
+    margin: -21% 0%;
+  }
+  .imgCar208 {
+    display: block;
+    position: absolute;
+    margin: -5% -5%;
+  }
+  .titleCars {
+    width: 500px;
+    height: auto;
+    padding: 30% 0 0;
+  }
+  
+  .titleHomea {
+    width:90%;
+    height: auto;
+    padding: 20% 0 0;
+  }
+  .titleHomeb {
+    width:95%;
+    height: auto;
+    padding: 30% 0 0;
+  }
+  .container-sidea .borderHome {
+    width: 50px;
+    position: absolute;
+    z-index: 9;
+    left:0;
+    top:55%;
+    border: 1px solid white;
+  }
+  .container-sideb .borderHome {
+    width: 50px;
+    position: absolute;
+    z-index: 9;
+    left:92%;
+    top:55%;
+    border: 1px solid white;
+  }
+  /*Button Cars*/
+ div.button-container {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 9;
+  top:50%;
+  left: 0;
+}
+
+  #btnCar .button-container {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 9;
+    top:50%;
+    left: 0;
+  }
+  
+  div.shadow-button {
+    background: white;
+    position: absolute;
+    top:-45px;
+    left:0;
+    z-index: 8;
+    opacity: .5;
+    width: 80px; 
+    height: 160px; 
+    -moz-border-radius: 0 100px 100px 0;
+    -webkit-border-radius: 0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
+  }
+  div.shadow-button:hover {
+    width: 90px; 
+  }
+  .button-container p {
+    font-family: 'PeugeotFont';
+    font-size: 12px;
+    color: white;
+    font-style: italic;
+    padding: 5px 0px 3px 5px;
+  }
+  .button-container .parrafo-button {
+    font-family: 'PeugeotFont';
+    font-weight: 900;
+    padding: 5px 0px 0px 20px;
+  }
+  #btnCar.button-containerb {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 9;
+    top:50%;
+    left: 83%;
+    text-align: right;
+  }
+  .menu-parrafo {
+    border-bottom: 1px solid white;
+    width: 70px;
+  }
+  .button-containerb p {
+    font-family: 'PeugeotFont';
+    font-size: 12px;
+    color: white;
+    font-style: italic;
+    padding: 5px 0px 3px 5px;
+  }
+  .button-containerb .menu-parrafo {
+    border-bottom: 1px solid white;
+    width: 70px;
+    text-align: right;
+    margin-left:40%;
+  }
+  .button-containerb .shadow-button {
+    background: white;
+    position: absolute;
+    top:-45px;
+    left:26%;
+    z-index: 8;
+    opacity: .5;
+    width: 100px; 
+    height: 160px; 
+    -moz-border-radius: 0 100px 100px 0;
+    -webkit-border-radius: 0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);  
+    -o-transform: rotate(180deg);
+  }
+  
+  .button-containerb .shadow-button:hover {
+    left:18%;
+  }
+  .button-containerb .parrafo-button {
+    font-weight: 900;
+    font-size: 11px;
+    padding: 5px 0px 0px 20px;
+  }
+
+  /*PEOGEUT 208*/
+ .car-container {
+    background-image: url('../app/content/img/background208.png');
+    background-repeat: no-repeat;
+     /* Set a specific height */
+     min-height: 850px; 
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+
+  .titleMax208 {
+    padding: 10% 0 5% 15%;
+  }
+  .minititle {
+    position: absolute;
+    z-index: 9;
+    top:28%;
+    left:50%;
+  }
+  .carImage {
+    position: absolute;
+    z-index: 9;
+    top:38%;
+    left:25%;
+  }
+
+  .button-containerc {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 9;
+    top:50%;
+    right: .5%;
+    text-align: right;
+  }
+  .button-containerc .shadow-button {
+    background: white;
+    position: absolute;
+    top:-45px;
+    left:26%;
+    z-index: 8;
+    opacity: .5;
+    width: 100px; 
+    height: 160px; 
+    -moz-border-radius: 0 100px 100px 0;
+    -webkit-border-radius: 0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);  
+    -o-transform: rotate(180deg);
+  }
+  .button-containerc p {
+    font-family: 'PeugeotFont';
+    font-size: 12px;
+    color: white;
+    font-style: italic;
+    padding: 5px 0px 3px 5px;
+  }
+  .button-containerc .shadow-button:hover {
+    left:18%;
+  }
+
+  /*Menu*/
+
+  #menu {
+    font-family: 'PeugeotFont',Arial, Helvetica, sans-serif;
+  }
+  .container-menu {
+    display: block;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    z-index: 9;
+    top:40%;
+    left: -5px;
+  }
+  #menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10% 0 5% 0;
+    overflow: hidden;
+  }
+  #menu ul li {
+    padding: 10px;
+  }
+  #menu ul li p {
+    border: .5px solid white;
+    width: 50px;
+  }
+  #menu ul li a {
+    font-size: 12px;
+    color:white;
+    padding-left: 20px;
+    text-decoration: none;
+  }
+  #menu ul li a.active {
+    padding-left: 50px;
+    font-size: 13px;
+  }
+  #menu ul li a:hover {
+    padding-left: 50px;
+  }
+  /*BOTONES ICONOS*/
+  div#optionsIcons.container-buttons-options {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    z-index: 9;
+    width: 400px;
+    height: auto;
+    padding: 0 0 0 5%;
+  }
+
+  .container-buttons-options .ico {
+    float: left;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .dieselImg {
+    position: absolute;
+    top:90%;
+    left: 20%;
+    z-index: 9;
+  }
+
+
+  .nodisplay {
+    display: none;
+  }
+
+
+  /*ICONS INFO*/
+  div#iconsInfo {
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    color:white;
+    font-family: 'PeugeotFont', 'Montserrat', sans-serif;
+    position: absolute;
+    top: 79%;
+    left: 25%;
+    overflow: hidden;
+  }
+  div#info-uno {
+    display: none;
+  }
+  div#iconsInfo #info-uno p:nth-child(2){
+   font-size: 30px;
+   font-weight: 900;
+  }
+  div#iconsInfo #info-uno p:nth-child(3){
+    font-size: 10px;
+    font-weight: 900;
+   }
+
+   div#info-dos {
+    display: none;
+    font-size: 10px;
+    overflow: hidden;
+  }
+  div#iconsInfo .container-items {
+    width: 33.3333%;
+    height: auto;
+    float:left;
+    padding: 0 15px 0 0;
+   }
+  div#iconsInfo #info-dos img {
+    width: 80px;
+    float: left;
+   }
+   div#iconsInfo #info-dos p {
+    float: left;
+   }
+
+   div#info-tres {
+    display: none;
+    overflow: hidden;
+  }
+
+  div#info-tres img {
+    float:left;
+    width: 160px;
+    height: auto;
+    margin: 0 -3% 0 0;
+    cursor: pointer;
+  }
+  div#info-tres img:hover {
+    transform: rotate(10deg);
+  }
+  div#info-tres img:nth-child(4) {
+    float:left;
+    width: 160px;
+    height: auto;
+    margin: 0 0 0 7%;
+  }
+
+  #car-dos {
+    display: none;
+  }
+
+  .leyenda {
+    position: absolute;
+    bottom:-30%;
+    left: 50%;
+    font-size: 8px;
+    padding: 0 0 2% 10%;
+    color: white;
+  }
+
+  .privacidad {
+    position: absolute;
+    bottom: -30%;
+    font-size: 12px;
+    padding: 0 75px;
+    color: white;
+  }

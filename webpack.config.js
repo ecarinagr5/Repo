@@ -5,6 +5,7 @@ var SRC_DIR = path.resolve(__dirname, "src");
 
 var config = {
     entry: SRC_DIR + "/app/index.js",
+
     output: {
         path: DIST_DIR + "/app",
         filename: "bundle.js",
@@ -19,7 +20,15 @@ var config = {
                 query: {
                     presets: ["react", "es2015", "stage-2"]
                 }
-            }
+            },
+            {
+                test:/\.scss$/, 
+                include: SRC_DIR,
+                loader:'style!css!sass',
+                exclude: /node_modules/
+            },
+            { test: /\.(jpe?g|png|gif|svg)$/i, 
+            loader: "url-loader?name=app/images/[name].[ext]"},
         ]
     }
 };
