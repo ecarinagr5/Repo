@@ -1,4 +1,5 @@
-var path = require("path");
+var path = require("path"); /*local sin info */
+/*var path = require("path/peugeot/208")*/
 
 var DIST_DIR = path.resolve(__dirname, "dist");
 var SRC_DIR = path.resolve(__dirname, "src");

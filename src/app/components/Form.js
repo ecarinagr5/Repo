@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../content/styles/style.css';
 import arrow from '../content/img/arrowdown.png';
 import $ from 'jquery';
 
