@@ -7,12 +7,13 @@ import Car208 from './views/Car208';
 
 class App extends Component {
    render() {
+       console.log("route", this)
       return (
          <Router>
             <div>
                <Switch>
-                  <Route exact path='/' component={Home} />
-                  <Route exact path='/Peogeut208' component={Car208} />
+                  <Route path='/' exact component={Home} />
+                  <Route path='/Peogeut208' component={Car208} />
                </Switch>
                <Header />
                <Form />

@@ -31,7 +31,10 @@ var config = {
             { test: /\.(jpe?g|png|gif|svg)$/i, 
             loader: "url-loader?name=app/images/[name].[ext]"},
         ]
-    }
+    },
+    devServer: {
+        historyApiFallback: true,
+      }
 };
 
 module.exports = config;
