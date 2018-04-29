@@ -31,8 +31,8 @@ class Home extends Component {
             <div style = { sidea } className="col-6 sideb container-shadowb">  
                 <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 301" />
                 <img  className="imgCar pullDown" src={this.state.imgCar301} alt="Peugout 301"/>
-            <BtnCar301 />
             </div> 
+            <BtnCar301 />
         </div>        
     </div>
       );

@@ -320,7 +320,7 @@
   .imgCar {
     display: block;
     position: absolute;
-    margin: -18% 0%;
+    margin: -17% 0%;
   }
   .imgCar208 {
     display: block;
@@ -364,7 +364,7 @@
   display: block;
   width: 100px;
   height: 100px;
-  position: absolute;
+  position: fixed;
   z-index: 9;
   top:50%;
   left: 0;
@@ -386,7 +386,7 @@
     top:-45px;
     left:0;
     z-index: 8;
-    opacity: .5;
+    opacity: .3;
     width: 80px; 
     height: 160px; 
     -moz-border-radius: 0 100px 100px 0;
@@ -406,17 +406,18 @@
   .button-container .parrafo-button {
     font-family: 'PeugeotFont';
     font-weight: 900;
-    padding: 5px 0px 0px 20px;
+    padding: 5px 0px 0px 25px;
   }
   #btnCar.button-containerb {
     display: block;
     width: 100px;
     height: 100px;
-    position: absolute;
+    position: fixed;
     z-index: 9;
     top:50%;
-    left: 83%;
+    right: 0;
     text-align: right;
+    font-family: 'Montserrat', sans-serif;
   }
   .menu-parrafo {
     border-bottom: 1px solid white;
@@ -433,16 +434,16 @@
     border-bottom: 1px solid white;
     width: 70px;
     text-align: right;
-    margin-left:40%;
+    margin-left:50%;
   }
   .button-containerb .shadow-button {
     background: white;
     position: absolute;
     top:-45px;
-    left:0;
-    margin-left: 30%;
+    right:0;
+    /*margin-left: 30%;*/
     z-index: 8;
-    opacity: .5;
+    opacity: .3;
     width: 100px; 
     height: 160px; 
     -moz-border-radius: 0 100px 100px 0;
