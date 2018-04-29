@@ -1,21 +1,53 @@
 import React, { Component } from 'react';
 
-class IconOption extends Component {
+class Iconoption extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            icons:
+            [
+                '../app/content/img/precioIcono.png',
+                '../app/content/img/accesoriosIcono.png',
+                '../app/content/img/gamaIcono.png',
+                '../app/content/img/diesel.png'
+            ],
+            accesorios:
+            [
+                '../app/content/img/rin-titanenegros.png',
+                '../app/content/img/yellowlime-detail.png',
+                '../app/content/img/menthol-detail.png'
+            ],
+            colorcar:
+            [
+                '../app/content/img/pegout208car.png',
+                '../app/content/img/pegout208car.png',
+                '../app/content/img/pegout208car.png',
+                '../app/content/img/pegout208car.png'
+            ],
+       };
+       this.handleClick = this.handleClick.bind(this);
+      }
+
+  
+      handleClick (val) {
+        console.log("si", val)
+    }
+
   render() {
     return (
         <div>
         <div id="optionsIcons" className="container-buttons-options">
-                    <div className="ico" onclick="clickItems(1)">
-                        <img className="titleMax208" src="Content/images/precioIcono.png" alt=""/>
+                    <div className="ico" onClick={() => this.handleClick(1)}>
+                        <img className="titleMax208" src={ this.state.icons[0] } alt="Peugeot 208"/>
                     </div>
-                    <div className="ico" onclick="clickItems(2)">
-                        <img className="titleMax208" src="Content/images/accesoriosIcono.png" alt=""/>
+                    <div className="ico" onClick={() => this.handleClick(2)} >
+                        <img className="titleMax208" src={ this.state.icons[1] } alt="Peugeot 208"/>
                     </div>
-                    <div className="ico" onclick="clickItems(3)">
-                        <img className="titleMax208" src="Content/images/gamaIcono.png" alt=""/>
+                    <div className="ico" onClick={() => this.handleClick(3)}>
+                        <img className="titleMax208" src={ this.state.icons[2] } alt="Peugeot 208"/>
                     </div>
                     <div>
-                        <img className="dieselImg" src="Content/images/diesel.png" alt=""/>
+                        <img className="dieselImg" src={ this.state.icons[3] } alt="Peugeot 208" />
                     </div>
             </div>
             <div id="iconsInfo" >
@@ -26,7 +58,7 @@ class IconOption extends Component {
                 </div>
                 <div id="info-dos" className="icons-content slideRight">
                     <div className="container-items">
-                        <img src="Content/images/rin-titanenegros.png" alt=""/>
+                        <img src={ this.state.accesorios[0] } alt="Peugeot 208" />
                         <span>
                             <h3>Rin Titan Negros</h3>
                             <br />
@@ -35,19 +67,19 @@ class IconOption extends Component {
                         </span>
                     </div>
                     <div className="container-items">
-                            <img src="Content/images/yellowlime-detail.png" alt=""/>
+                            <img src={ this.state.accesorios[1] } alt="Peugeot 208" />
                             <span><b>Yellow Lime</b></span>
                     </div>
                     <div className="container-items">
-                            <img src="Content/images/menthol-detail.png" alt="" />
+                            <img src={ this.state.accesorios[2] } alt="Peugeot 208" />
                             <span><b>Menthol</b></span>
                     </div>
                 </div>
                 <div id="info-tres" className="icons-content slideRight">
-                        <img src="Content/images/pegout208car.png" onClick="changeCar(1)" alt="" />
-                        <img src="Content/images/pegout208car.png" onClick="changeCar(2)" alt="" />
-                        <img src="Content/images/pegout208car.png" onClick="changeCar(3)" alt="" />
-                        <img src="Content/images/pegout208car.png" onclick="changeCar(4)" alt="" />
+                        <img src={ this.state.colorcar[0] } alt="Peugeot 208" />
+                        <img src={ this.state.colorcar[1] } alt="Peugeot 208" />
+                        <img src={ this.state.colorcar[2] } alt="Peugeot 208" />
+                        <img src={ this.state.colorcar[3] } alt="Peugeot 208" />
                 </div>
             </div>
         </div>
@@ -55,4 +87,4 @@ class IconOption extends Component {
   }
 }
 
-export default IconOption;
+export default Iconoption;
