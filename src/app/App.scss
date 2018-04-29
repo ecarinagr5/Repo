@@ -486,7 +486,7 @@
   .carImage {
     position: absolute;
     z-index: 9;
-    top:38%;
+    top:28%;
     left:25%;
   }
 
@@ -539,7 +539,7 @@
     height: auto;
     position: fixed;
     z-index: 9;
-    top:40%;
+    top:30%;
     left: -5px;
   }
   #menu ul {
@@ -570,8 +570,8 @@
   }
   /*BOTONES ICONOS*/
   div#optionsIcons.container-buttons-options {
-    position: absolute;
-    top: 80%;
+    position: fixed;
+    bottom: 10%;
     left: 0;
     z-index: 9;
     width: 300px;
@@ -601,11 +601,11 @@
   div#iconsInfo {
     width: 100%;
     max-width: 800px;
-    position: absolute;
+    position: fixed;
     color:white;
     font-family: 'PeugeotFont', 'Montserrat', sans-serif;
     position: absolute;
-    top: 79%;
+    top: 65%;
     left: 25%;
     overflow: hidden;
   }
