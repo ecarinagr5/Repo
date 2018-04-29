@@ -7,7 +7,6 @@ import Car208 from './views/Car208';
 
 class App extends Component {
    render() {
-       console.log("route", this)
       return (
          <Router>
             <div>
