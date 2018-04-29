@@ -12,7 +12,8 @@ class Form extends Component {
   handleClick = () => {
     this.setState({value: this.state.value + 1}, () => {
       if (this.state.value % 2 !== 0) {
-        $('#logo-footer').css('bottom', '63%');
+        var topFooter = $('#footer-container').height();
+        $('#logo-footer').css('bottom', topFooter);
         $('#footer-container').fadeToggle("fast");
         } else {
         $('#logo-footer').css('bottom', '0');
@@ -23,6 +24,7 @@ class Form extends Component {
 
 
   render() {
+    console.log("thissss", this)
     let ubicacion = ['PEUGEOT AGUASCALIENTES', 'PEUGEOT CHIHUAHUA', 'PEUGEOT TORREÓN',
   'PEUGEOT SALTILLO','PEUGEOT DF UNIVERSIDAD','PEUGEOT DF VALLEJO','PEUGEOT DF ANZURES','PEUGEOT DF LOMAS VERDES',
   'PEUGEOT DF LOMAS VERDES','PEUGEOT DF ARBOLEDAS','PEUGEOT PACHUCA','PEUGEOT GUADALAJARA AVILA CAMACHO',
@@ -42,7 +44,7 @@ class Form extends Component {
               <br />
               <img src={arrow} alt="arrow"/>
           </div>
-          <div id="footer-container">
+          <div id="footer-container" ref="footer-container">
             <div className="col-6 content-form sideleft">
                 <p className="campolado"><label>Nombre(s) </label><br/><input type="text" name="fname" placeholder="Nombre"/></p>
                 <p className="campolado"><label>Apellido</label><br/><input type="text" name="fapellido" placeholder="Apellido"/></p>

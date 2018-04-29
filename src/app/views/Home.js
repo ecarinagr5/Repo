@@ -12,24 +12,26 @@ class Home extends Component {
              imgCar301:'../app/content/img/car301.png',
         };
       }
-   render() {
-       console.log("state", )
+    
+   render() { 
+    const sidea = {
+        height:  screen.height,
+      };      
       return (
         <div id="body-container">
         <div className="maxWidthAvailable">
-            <div className="col-6 container-sidea container-shadow"> 
+            <div style = { sidea } className="col-6 sidea container-shadow"> 
                 <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 208" />
                 <a href="../peugeot/Peugeot208.html">
                     <img className="imgCar208 pullDown" src={this.state.imgCar208} alt="Peugout 208"/>
                 </a>
                 <BtnCar208 />
- 
             </div>
-            <div className="col-6 container-sideb container-shadowb">  
+            <div style = { sidea } className="col-6 sideb container-shadowb">  
                 <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 301" />
                 <img  className="imgCar pullDown" src={this.state.imgCar301} alt="Peugout 301"/>
-            </div> 
             <BtnCar301 />
+            </div> 
         </div>        
     </div>
       );
