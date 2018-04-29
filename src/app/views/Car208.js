@@ -104,13 +104,13 @@ class Car208 extends Component {
                     <Menu />
                 <div id="optionsIcons" className="container-buttons-options">
                     <div className="ico" onClick={() => this.handleClick('icon', 1)}>
-                        <img className="titleMax208" src={ this.state.icons[0] } alt="Peugeot 208"/>
+                        <img src={ this.state.icons[0] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 2)} >
-                        <img className="titleMax208" src={ this.state.icons[1] } alt="Peugeot 208"/>
+                        <img src={ this.state.icons[1] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 3)}>
-                        <img className="titleMax208" src={ this.state.icons[2] } alt="Peugeot 208"/>
+                        <img src={ this.state.icons[2] } alt="Peugeot 208"/>
                     </div>
                     <div>
                         <img className="dieselImg" src={ this.state.icons[3] } alt="Peugeot 208" />
@@ -151,6 +151,7 @@ class Car208 extends Component {
                     </div>
                 </div>
             <BtnCar301 />
+            <Leyendas />
         </div>
       );
    }

@@ -318,17 +318,19 @@
     background-size: 100% auto;
   }
   .imgCar {
+    width: 100%;
     display: block;
     position: absolute;
     margin: -17% 0%;
   }
   .imgCar208 {
     display: block;
+    width: 100%;
     position: absolute;
     margin: -3% -5%;
   }
   .titleCars {
-    width: 500px;
+    width: 100%;
     height: auto;
     padding: 30% 0 0;
   }
@@ -475,15 +477,19 @@
   }
 
   .titleMax208 {
+    width: 85%;
     padding: 10% 0 5% 15%;
   }
   .minititle {
     position: absolute;
     z-index: 9;
-    top:28%;
+    top:30%;
     left:50%;
+    width: 35%;
+
   }
   .carImage {
+    width: 50%;
     position: absolute;
     z-index: 9;
     top:28%;
@@ -673,17 +679,18 @@
   }
 
   .leyenda {
-    position: absolute;
-    bottom:-30%;
-    left: 50%;
+    position: fixed;
+    bottom:0%;
+    right: 0%;
     font-size: 8px;
     padding: 0 0 2% 10%;
     color: white;
   }
 
-  .privacidadb {
-    position: absolute;
-    bottom: -30%;
+  .privacidad-note {
+    position: fixed;
+    bottom: 2%;
+    left: 0%;
     font-size: 12px;
     padding: 0 75px;
     color: white;

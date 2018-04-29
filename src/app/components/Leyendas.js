@@ -5,7 +5,7 @@ class Leyendas extends Component {
     render() {
         return (
         <div>
-            <div className="privacidad col-6">
+            <div className="privacidad-note col-6">
                 <b>Aviso de Privacidad</b>
              </div>
             <div className="leyenda col-6">
