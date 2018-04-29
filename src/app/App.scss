@@ -17,7 +17,7 @@
   .maxWidthAvailable {
     max-width: 1366px;
     width: 100%;
-    height: 800px;
+    height: auto;
     margin: 0 auto;
     position: relative;
   }
@@ -94,7 +94,7 @@
   }
   .container-sidea {
     background: #cc2b00;
-    height: 800px;
+    height: auto;
     position: relative;
     text-align: center;
   }
@@ -126,7 +126,7 @@
   
   .container-sideb {
     background: rgb(186, 186, 186);
-    height: 850px;
+    height: auto;
     position: relative;
     text-align: center;
   }
