@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BtnCar208 from '../components/BtnCar208';
 import BtnCar301 from '../components/BtnCar301';
 import Menu from '../components/Menu';
-import Iconoption from '../components/Iconoption';
+import Leyendas from '../components/Leyendas';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 class Car208 extends Component {
@@ -13,10 +13,10 @@ class Car208 extends Component {
             minititle :'../app/content/img/minititle208.png',
             Car208:
             [
-            '../app/content/img/pegout208car.png',
-            '../app/content/img/pegout208car.png',
-            '../app/content/img/pegout208car.png',
-            '../app/content/img/pegout208car.png'
+                '../app/content/img/208gris.png',
+                '../app/content/img/208orange.png',
+                '../app/content/img/208blanco.png',
+                '../app/content/img/208rojo.png'
             ],
             icons:
             [
@@ -33,17 +33,17 @@ class Car208 extends Component {
             ],
             colorcar:
             [
-                '../app/content/img/pegout208car.png',
-                '../app/content/img/pegout208car.png',
-                '../app/content/img/pegout208car.png',
-                '../app/content/img/pegout208car.png'
+                '../app/content/img/208gris-s.png',
+                '../app/content/img/208orange-s.png',
+                '../app/content/img/208blanco-s.png',
+                '../app/content/img/208rojo-s.png'
             ]
        };
        this.handleClick = this.handleClick.bind(this);
+       this.handleCar = this.handleCar.bind(this);
       }
       
     handleClick (origen, val) {
-        console.log("si", origen, val)
         if (origen === 'icon' && val === 1) {
             document.getElementById("info-uno").style.display = "block";
             document.getElementById("info-dos").style.display = "none";
@@ -56,13 +56,38 @@ class Car208 extends Component {
             document.getElementById("info-tres").style.display = "block";
             document.getElementById("info-dos").style.display = "none";
             document.getElementById("info-uno").style.display = "none";          
-        }  else if (origen === 'car' && val === 1) {
+        }  
+    }
+
+    handleCar (car) {
+        switch( car ) {
+            case 0:
+                document.getElementById("car-uno").style.display = "block";
+                document.getElementById("car-dos").style.display = "none"; 
+                document.getElementById("car-tres").style.display = "none";
+                document.getElementById("car-cuatro").style.display = "none";               
+            break;
+            case 1:
+                document.getElementById("car-uno").style.display = "none";
+                document.getElementById("car-dos").style.display = "block"; 
+                document.getElementById("car-tres").style.display = "none";
+                document.getElementById("car-cuatro").style.display = "none"; 
+            break;
+            case 2:
+                document.getElementById("car-uno").style.display = "none";
+                document.getElementById("car-dos").style.display = "none"; 
+                document.getElementById("car-tres").style.display = "block";
+                document.getElementById("car-cuatro").style.display = "none"; 
+            break;
+            case 3:
+                document.getElementById("car-uno").style.display = "none";
+                document.getElementById("car-dos").style.display = "none"; 
+                document.getElementById("car-tres").style.display = "none";
+                document.getElementById("car-cuatro").style.display = "block"; 
+             break;
+            default:
             document.getElementById("car-uno").style.display = "block";
-            document.getElementById("car-dos").style.display = "none";         
-        }  else if (origen === 'car' && val === 2) {
-            document.getElementById("car-uno").style.display = "none";
-            document.getElementById("car-dos").style.display = "block";         
-        } 
+        }
     }
 
    render() { 
@@ -117,10 +142,10 @@ class Car208 extends Component {
                         </div>
                     </div>
                     <div id="info-tres" className="icons-content slideRight">
-                            <img src={ this.state.colorcar[0] } onClick={() => this.handleClick('car', 0) } alt="Peugeot 208" />
-                            <img src={ this.state.colorcar[1] } onClick={() => this.handleClick('car', 1)} alt="Peugeot 208" />
-                            <img src={ this.state.colorcar[2] } onClick={() => this.handleClick('car', 2 )}alt="Peugeot 208" />
-                            <img src={ this.state.colorcar[3] } onClick={() => this.handleClick('car', 3)} alt="Peugeot 208" />
+                            <img src={ this.state.colorcar[0] } onClick={() => this.handleCar(0) } alt="Peugeot 208" />
+                            <img src={ this.state.colorcar[1] } onClick={() => this.handleCar(1)} alt="Peugeot 208" />
+                            <img src={ this.state.colorcar[2] } onClick={() => this.handleCar(2)}alt="Peugeot 208" />
+                            <img src={ this.state.colorcar[3] } onClick={() => this.handleCar(3)} alt="Peugeot 208" />
                     </div>
                     </div>
                     </div>
