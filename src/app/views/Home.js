@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BtnCar208 from '../components/BtnCar208';
 import BtnCar301 from '../components/BtnCar301';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 class Home extends Component {
     constructor(props) {
@@ -22,10 +23,10 @@ class Home extends Component {
         <div className="maxWidthAvailable">
             <div style = { sidea } className="col-6 sidea container-shadow"> 
                 <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 208" />
-                <a href="../peugeot/Peugeot208.html">
+                <Link to="/Peogeut208">
                     <img className="imgCar208 pullDown" src={this.state.imgCar208} alt="Peugout 208"/>
-                </a>
-                <BtnCar208 />
+                </Link>
+            <BtnCar208 />
             </div>
             <div style = { sidea } className="col-6 sideb container-shadowb">  
                 <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 301" />

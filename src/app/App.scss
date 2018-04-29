@@ -72,7 +72,7 @@
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);  
     -o-transform: rotate(180deg);
-    position: absolute;
+    position: fixed;
     left: 42%;
     top: 0px;
         z-index: 5;
@@ -162,7 +162,7 @@
     width: 160px;
     border-radius: 50% / 100% 100% 0 0;
     background: white;
-    position: absolute;
+    position: fixed;
         left: 44%;
         bottom:0; 
         z-index: 9;
@@ -181,7 +181,7 @@
     font-size: 13px;
   }
   #footer-container {   
-    position: absolute;
+    position: fixed;
     background: white;
     height: 380px;
     bottom: 0%;
@@ -688,7 +688,7 @@
 
   /*
 ==============================================
-bigEntrance
+Animaciones
 ==============================================
 */
 
