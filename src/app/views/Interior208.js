@@ -4,6 +4,7 @@ import BtnCar301 from '../components/BtnCar301';
 import Menu from '../components/Menu';
 import Leyendas from '../components/Leyendas';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Description from '../components/description';
 
 class Interior208 extends Component {
     constructor(props) {
@@ -62,6 +63,7 @@ class Interior208 extends Component {
         <div id="body-container">
             <div className="maxWidthAvailable">
                 <div id="car208" className="interior-container pullDown">
+                <Description />
                 <div className="video-background">
                     <div className="video-foreground">
                       <iframe src="https://www.youtube.com/embed/_g_L-44JYss?controls=1&showinfo=0&rel=0&autoplay=0&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen />

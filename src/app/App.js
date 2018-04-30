@@ -6,6 +6,7 @@ import Form from './components/Form';
 import Car208 from './views/Car208';
 import Exterior208 from './views/Exterior208';
 import Interior208 from './views/Interior208';
+import Seguridad208 from './views/Seguridad208';
 
 class App extends Component {
    render() {
@@ -17,6 +18,7 @@ class App extends Component {
                   <Route path='/Peugeot208' component={ Car208 } />
                   <Route path='/Peugeot-Exterior-208' component={ Exterior208 } />
                   <Route path='/Peugeot-Interior-208' component={ Interior208 } />
+                  <Route path='/Peugeot-Seguridad-208' component={ Seguridad208 } />
                </Switch>
                <Header />
                <Form />
