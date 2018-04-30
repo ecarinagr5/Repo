@@ -25,7 +25,6 @@ class Leyendas extends Component {
             background: 'white',
             float:'left'
         };
-        console.log("this", this.state.flag)
     return (
         <div>
             <div id="divPopup" className={`popUp ${this.state.flag === 0 ? 'hideDiv': ''}`}>

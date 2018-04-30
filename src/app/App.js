@@ -4,6 +4,8 @@ import Home from './views/Home';
 import Header from './components/Header';
 import Form from './components/Form';
 import Car208 from './views/Car208';
+import Exterior208 from './views/Exterior208';
+import Interior208 from './views/Interior208';
 
 class App extends Component {
    render() {
@@ -11,8 +13,10 @@ class App extends Component {
          <Router>
             <div>
                <Switch>
-                  <Route path='/' exact component={Home} />
-                  <Route path='/Peogeut208' component={Car208} />
+                  <Route path='/' exact component={ Home } />
+                  <Route path='/Peogeut208' component={ Car208 } />
+                  <Route path='/Peogeut-Exterior-208' component={ Exterior208 } />
+                  <Route path='/Peogeut-Interior-208' component={ Interior208 } />
                </Switch>
                <Header />
                <Form />
