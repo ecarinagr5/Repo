@@ -101,6 +101,10 @@
   #body-container {
     margin: 0 auto;
   }
+
+  .background208 {
+    background: #cc2b00;
+  }
   .sidea {
     background: #cc2b00;
     height: auto;
@@ -485,6 +489,21 @@
      background-size: cover;
   }
 
+  .exterior208-container {
+    background-image: url('../app/content/img/exteriorShandow.png');
+    background-repeat: no-repeat;
+     /* Set a specific height */
+     min-height: 850px; 
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+  .mini-titleExterior {
+    padding: 0 0 0 30%;
+  }
   .interior-container {
     background: black;
     background-repeat: no-repeat;
@@ -526,13 +545,18 @@
     left:45%;
   }
   .description-exterior {
-    width: 30%;
+    width: 28%;
     position: absolute;
     z-index: 9;
     top:28%;
     left:22%;
     color:white;
     font-size:13px;
+  }
+  .description-exterior p {
+    margin: 5% 0;
+    text-align: justify;
+  
   }
 
   .button-containerc {

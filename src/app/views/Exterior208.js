@@ -4,6 +4,7 @@ import BtnCar301 from '../components/BtnCar301';
 import Menu from '../components/Menu';
 import Leyendas from '../components/Leyendas';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Description from '../components/description';
 
 class Exterior208 extends Component {
     constructor(props) {
@@ -60,9 +61,9 @@ class Exterior208 extends Component {
     handleCar (car) {
         switch( car ) {
             case 0:
-                document.getElementById("car-uno").style.display = "block";
+                document.getElementById("car-tres").style.display = "block";
                 document.getElementById("car-dos").style.display = "none"; 
-                document.getElementById("car-tres").style.display = "none";
+                document.getElementById("car-uno").style.display = "none";
                 document.getElementById("car-cuatro").style.display = "none";               
             break;
             case 1:
@@ -72,9 +73,9 @@ class Exterior208 extends Component {
                 document.getElementById("car-cuatro").style.display = "none"; 
             break;
             case 2:
-                document.getElementById("car-uno").style.display = "none";
+                document.getElementById("car-tres").style.display = "none";
                 document.getElementById("car-dos").style.display = "none"; 
-                document.getElementById("car-tres").style.display = "block";
+                document.getElementById("car-uno").style.display = "block";
                 document.getElementById("car-cuatro").style.display = "none"; 
             break;
             case 3:
@@ -84,20 +85,20 @@ class Exterior208 extends Component {
                 document.getElementById("car-cuatro").style.display = "block"; 
              break;
             default:
-            document.getElementById("car-uno").style.display = "block";
+            document.getElementById("car-tres").style.display = "block";
         }
     }
 
    render() { 
     let path = window.location.origin;
-       console.log("dd", )
       return (
-        <div id="body-container" className={`${ window.location.href === path +  '/Peogeut208' ? 'active' : ''}`}>
+        <div id="body-container" className={`${ window.location.href === path +  '/Peugeot-Exterior-208' ? 'background208' : ''}`}>
             <div className="maxWidthAvailable">
-                <div id="car208" className="car-container pullDown">
-                    <img id="car-uno" className="carImageExterior slideCar" src={ this.state.Car208[0]}  alt="Peogeut 208" />
+                <Description />
+                <div id="car208" className="exterior208-container pullDown">
+                    <img id="car-uno" className="carImageExterior slideCar" src={ this.state.Car208[2]} alt="Peogeut 208" />
+                    <img id="car-tres" className="carImageExterior slideCar" src={ this.state.Car208[0]}  alt="Peogeut 208" />
                     <img id="car-dos" className="carImageExterior slideCar" src={ this.state.Car208[1]} alt="Peogeut 208" />
-                    <img id="car-tres" className="carImageExterior slideCar" src={ this.state.Car208[2]} alt="Peogeut 208" />
                     <img id="car-cuatro" className="carImageExterior slideCar" src={ this.state.Car208[3]} alt="Peogeut 208" />
                     <Menu />
                 <div id="optionsIcons" className="container-buttons-options">
