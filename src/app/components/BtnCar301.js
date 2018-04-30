@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class BtnCar301 extends Component {
     render() {
+        const rutaBase = '/'; /*Para prod debe ir / */ 
         return (
             <div id="btnCar" className="button-containerb">
                 <div className="shadow-button"></div>

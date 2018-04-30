@@ -12,11 +12,12 @@ class Description extends Component {
     
     content() {
         let path = window.location.origin;
+        const rutaBase = '/'; /*Para prod debe ir / */  
         if( window.location.href === path +  '/Peugeot-Exterior-208' ) {
             return(
                 <div>
-                    <img className="mini-titleExterior" src={ this.state.exteriorMinititle } alt="Peugeot 208"/>
-                    <img src={ this.state.exteriorTitle } alt="Peugeot 208"/>
+                    <img className="mini-titleExterior" src={ rutaBase + this.state.exteriorMinititle } alt="Peugeot 208"/>
+                    <img src={ rutaBase + this.state.exteriorTitle } alt="Peugeot 208"/>
                     <p>El Peogeut 208 GT es un concentrado de estilo y deportividad. 
                     Tanto por su línea como por el cuidado de cada detalle, este
                     deportivo despierta el mito GT de manera contemporánea.</p>

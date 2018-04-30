@@ -11,16 +11,17 @@ import PeCumple from './views/PeCumple';
 
 class App extends Component {
    render() {
+       const rutaBase = '/'; /*Para prod debe ir /*/
       return (
          <Router>
             <div>
                <Switch>
-                  <Route path='/' exact component={ Home } />
-                  <Route path='/Peugeot208' component={ Car208 } />
-                  <Route path='/Peugeot-Exterior-208' component={ Exterior208 } />
-                  <Route path='/Peugeot-Interior-208' component={ Interior208 } />
-                  <Route path='/Peugeot-Seguridad-208' component={ Seguridad208 } />
-                  <Route path='/Peugeot-Cumple' component={ PeCumple } />
+                  <Route path={ rutaBase } exact component={ Home } />
+                  <Route path={ '/Peugeot208'} component={ Car208 } />
+                  <Route path={ '/Peugeot-Exterior-208'} component={ Exterior208 } />
+                  <Route path={ '/Peugeot-Interior-208'} component={ Interior208 } />
+                  <Route path={ '/Peugeot-Seguridad-208'} component={ Seguridad208 } />
+                  <Route path={ '/Peugeot-Cumple'} component={ PeCumple } />
                </Switch>
                <Header />
                <Form />

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+//Vars
+$Path : "/peugeot/208";
 
 * {
     box-sizing: border-box;
@@ -178,7 +180,7 @@
     position: fixed;
         left: 44%;
         bottom:0; 
-        z-index: 9;
+        z-index: 12;
     text-align: center;
     padding: 20px 25px;
     cursor: pointer;
@@ -200,7 +202,7 @@
     bottom: 0%;
     width: 100%;
     display: none;
-    z-index: 9;
+    z-index: 12;
   }
   
   /*Formulario*/
@@ -749,6 +751,7 @@
     font-size: 8px;
     padding: 0 0 2% 10%;
     color: white;
+    z-index: 12;
   }
 
   .privacidad-note {

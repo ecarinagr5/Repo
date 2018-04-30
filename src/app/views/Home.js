@@ -17,20 +17,21 @@ class Home extends Component {
    render() { 
     const sidea = {
         height:  screen.height,
-      };      
+      }; 
+      const rutaBase = ''; /*Para prod debe ir / */     
       return (
         <div id="body-container">
         <div className="maxWidthAvailable">
             <div style = { sidea } className="col-6 sidea container-shadow"> 
-                <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 208" />
-                <Link to="/Peugeot208">
-                    <img className="imgCar208 pullDown" src={this.state.imgCar208} alt="Peugout 208"/>
+                <img className="titleCars fadeIn" src={rutaBase + this.state.title208} alt="Peugout 208" />
+                <Link to={"/Peugeot208"}>
+                    <img className="imgCar208 pullDown" src={rutaBase + this.state.imgCar208} alt="Peugout 208"/>
                 </Link>
             <BtnCar208 />
             </div>
             <div style = { sidea } className="col-6 sideb container-shadowb">  
-                <img className="titleCars fadeIn" src={this.state.title301} alt="Peugout 301" />
-                <img  className="imgCar pullDown" src={this.state.imgCar301} alt="Peugout 301"/>
+                <img className="titleCars fadeIn" src={rutaBase + this.state.title301} alt="Peugout 301" />
+                <img  className="imgCar pullDown" src={rutaBase + this.state.imgCar301} alt="Peugout 301"/>
             </div> 
             <BtnCar301 />
         </div>        

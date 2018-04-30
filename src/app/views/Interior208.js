@@ -59,6 +59,7 @@ class Interior208 extends Component {
 
 
     render() { 
+        const rutaBase = ''; /*Para prod debe ir / */ 
         return (
         <div id="body-container">
             <div className="maxWidthAvailable">
@@ -72,16 +73,16 @@ class Interior208 extends Component {
                     <Menu />
                 <div id="optionsIcons" className="container-buttons-options">
                     <div className="ico" onClick={() => this.handleClick('icon', 1)}>
-                        <img src={ this.state.icons[0] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[0] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 2)} >
-                        <img src={ this.state.icons[1] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[1] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 3)}>
-                        <img src={ this.state.icons[2] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[2] } alt="Peugeot 208"/>
                     </div>
                     <div>
-                        <img className="dieselImg" src={ this.state.icons[3] } alt="Peugeot 208" />
+                        <img className="dieselImg" src={ rutaBase + this.state.icons[3] } alt="Peugeot 208" />
                     </div>
                 </div>
                 <div id="iconsInfo" >
@@ -92,7 +93,7 @@ class Interior208 extends Component {
                     </div>
                     <div id="info-dos" className="icons-content slideRight">
                         <div className="container-items">
-                            <img src={ this.state.accesorios[0] } alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.accesorios[0] } alt="Peugeot 208" />
                             <span>
                                 <h3>Rin Titan Negros</h3>
                                 <br />
@@ -101,19 +102,19 @@ class Interior208 extends Component {
                             </span>
                         </div>
                         <div className="container-items">
-                                <img src={ this.state.accesorios[1] } alt="Peugeot 208" />
+                                <img src={rutaBase +  this.state.accesorios[1] } alt="Peugeot 208" />
                                 <span><b>Yellow Lime</b></span>
                         </div>
                         <div className="container-items">
-                                <img src={ this.state.accesorios[2] } alt="Peugeot 208" />
+                                <img src={ rutaBase + this.state.accesorios[2] } alt="Peugeot 208" />
                                 <span><b>Menthol</b></span>
                         </div>
                     </div>
                     <div id="info-tres" className="icons-content slideRight">
-                           <Link to="/Peugeot208"> <img src={ this.state.colorcar[0] } alt="Peugeot 208" /></Link>
-                           <Link to="/Peugeot208"><img src={ this.state.colorcar[1] } alt="Peugeot 208" /></Link>
-                           <Link to="/Peugeot208"><img src={ this.state.colorcar[2] } alt="Peugeot 208" /></Link>
-                           <Link to="/Peugeot208"><img src={ this.state.colorcar[3] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"> <img src={ rutaBase + this.state.colorcar[0] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"><img src={rutaBase +  this.state.colorcar[1] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"><img src={ rutaBase + this.state.colorcar[2] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"><img src={rutaBase +  this.state.colorcar[3] } alt="Peugeot 208" /></Link>
                     </div>
                     </div>
                     </div>

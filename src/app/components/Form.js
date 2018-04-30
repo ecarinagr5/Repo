@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import arrow from '../content/img/arrowdown.png';
 import $ from 'jquery';
 
 class Form extends Component {
@@ -27,6 +26,8 @@ class Form extends Component {
 
 
   render() {
+    const rutaBase = '/'; /*Para prod debe ir / */ 
+    const arrow = '../app/content/img/arrowdown.png';
     let ubicacion = ['PEUGEOT AGUASCALIENTES', 'PEUGEOT CHIHUAHUA', 'PEUGEOT TORREÓN',
   'PEUGEOT SALTILLO','PEUGEOT DF UNIVERSIDAD','PEUGEOT DF VALLEJO','PEUGEOT DF ANZURES','PEUGEOT DF LOMAS VERDES',
   'PEUGEOT DF LOMAS VERDES','PEUGEOT DF ARBOLEDAS','PEUGEOT PACHUCA','PEUGEOT GUADALAJARA AVILA CAMACHO',
@@ -42,9 +43,9 @@ class Form extends Component {
     return (
           <div>
             <div id="logo-footer" onClick={ this.handleClick }>
-              <img src={ this.state.open } alt="Vive la experiencia Peugeot" />
+              <img src={ rutaBase + this.state.open } alt="Vive la experiencia Peugeot" />
               <br />
-              <img src={arrow} alt="arrow"/>
+              <img src={rutaBase + arrow} alt="arrow"/>
           </div>
           <div id="footer-container" ref="footer-container">
             <div className="col-6 content-form sideleft">

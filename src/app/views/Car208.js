@@ -91,29 +91,30 @@ class Car208 extends Component {
     }
 
    render() { 
+    const rutaBase = '/'; /*Para prod debe ir / */ 
       return (
         <div id="body-container">
             <div className="maxWidthAvailable">
                 <div id="car208" className="car-container pullDown">
-                    <img className="titleMax208 fadeIn" src={ this.state.title208 } alt="Peogeut 208" />
-                    <img className="minititle" src={ this.state.minititle } alt="Peogeut 208" />
-                    <img id="car-uno" className="carImage slideCar" src={ this.state.Car208[0]}  alt="Peogeut 208" />
-                    <img id="car-dos" className="carImage slideCar" src={ this.state.Car208[1]} alt="Peogeut 208" />
-                    <img id="car-tres" className="carImage slideCar" src={ this.state.Car208[2]} alt="Peogeut 208" />
-                    <img id="car-cuatro" className="carImage slideCar" src={ this.state.Car208[3]} alt="Peogeut 208" />
+                    <img className="titleMax208 fadeIn" src={ rutaBase + this.state.title208 } alt="Peogeut 208" />
+                    <img className="minititle" src={ rutaBase + this.state.minititle } alt="Peogeut 208" />
+                    <img id="car-uno" className="carImage slideCar" src={ rutaBase + this.state.Car208[0]}  alt="Peogeut 208" />
+                    <img id="car-dos" className="carImage slideCar" src={ rutaBase + this.state.Car208[1]} alt="Peogeut 208" />
+                    <img id="car-tres" className="carImage slideCar" src={ rutaBase + this.state.Car208[2]} alt="Peogeut 208" />
+                    <img id="car-cuatro" className="carImage slideCar" src={ rutaBase + this.state.Car208[3]} alt="Peogeut 208" />
                     <Menu />
                 <div id="optionsIcons" className="container-buttons-options">
                     <div className="ico" onClick={() => this.handleClick('icon', 1)}>
-                        <img src={ this.state.icons[0] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[0] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 2)} >
-                        <img src={ this.state.icons[1] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[1] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 3)}>
-                        <img src={ this.state.icons[2] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[2] } alt="Peugeot 208"/>
                     </div>
                     <div>
-                        <img className="dieselImg" src={ this.state.icons[3] } alt="Peugeot 208" />
+                        <img className="dieselImg" src={ rutaBase + this.state.icons[3] } alt="Peugeot 208" />
                     </div>
                 </div>
                 <div id="iconsInfo" >
@@ -124,7 +125,7 @@ class Car208 extends Component {
                     </div>
                     <div id="info-dos" className="icons-content slideRight">
                         <div className="container-items">
-                            <img src={ this.state.accesorios[0] } alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.accesorios[0] } alt="Peugeot 208" />
                             <span>
                                 <h3>Rin Titan Negros</h3>
                                 <br />
@@ -133,19 +134,19 @@ class Car208 extends Component {
                             </span>
                         </div>
                         <div className="container-items">
-                                <img src={ this.state.accesorios[1] } alt="Peugeot 208" />
+                                <img src={ rutaBase + this.state.accesorios[1] } alt="Peugeot 208" />
                                 <span><b>Yellow Lime</b></span>
                         </div>
                         <div className="container-items">
-                                <img src={ this.state.accesorios[2] } alt="Peugeot 208" />
+                                <img src={ rutaBase + this.state.accesorios[2] } alt="Peugeot 208" />
                                 <span><b>Menthol</b></span>
                         </div>
                     </div>
                     <div id="info-tres" className="icons-content slideRight">
-                            <img src={ this.state.colorcar[0] } onClick={() => this.handleCar(0) } alt="Peugeot 208" />
-                            <img src={ this.state.colorcar[1] } onClick={() => this.handleCar(1)} alt="Peugeot 208" />
-                            <img src={ this.state.colorcar[2] } onClick={() => this.handleCar(2)}alt="Peugeot 208" />
-                            <img src={ this.state.colorcar[3] } onClick={() => this.handleCar(3)} alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.colorcar[0] } onClick={() => this.handleCar(0) } alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.colorcar[1] } onClick={() => this.handleCar(1)} alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.colorcar[2] } onClick={() => this.handleCar(2)}alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.colorcar[3] } onClick={() => this.handleCar(3)} alt="Peugeot 208" />
                     </div>
                     </div>
                     </div>
