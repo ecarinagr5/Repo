@@ -27,6 +27,16 @@ class Description extends Component {
                     <h2>PEUGEOT I-COCKPIT®</h2>
                 </div>
             );
+        } else if ( window.location.href === path + '/Peugeot-Seguridad-208' ) {
+            return(
+                <div className="title-seguridad">
+                    <h2>SEGURIDAD</h2>
+                    <p>* Cruise Control <br />
+                        * Programa Dinámico de Estabilidad (ESP) <br />
+                        * Bolsas de aire <br />
+                        * Estructura de carrocería ultra-ligera</p>
+                </div>
+            );
         }
     }
     
