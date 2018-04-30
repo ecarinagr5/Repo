@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 //Vars
-$Path : "/peugeot/208";
+$Path : "";
 
 * {
     box-sizing: border-box;
@@ -106,6 +106,9 @@ $Path : "/peugeot/208";
 
   .background208 {
     background: #cc2b00;
+  }
+  .background301 {
+    background: #f0f0f0;
   }
   .sidea {
     background: #cc2b00;
@@ -491,6 +494,19 @@ $Path : "/peugeot/208";
      background-size: cover;
   }
 
+  .car-container301 {
+    background-image: url('../app/content/img/background301.png');
+    background-repeat: no-repeat;
+     /* Set a specific height */
+     min-height: 850px; 
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+  }
+
   .exterior208-container {
     background-image: url('../app/content/img/exteriorShandow.png');
     background-repeat: no-repeat;
@@ -537,6 +553,13 @@ $Path : "/peugeot/208";
     z-index: 9;
     top:28%;
     left:25%;
+  }
+  .carImage301 {
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    top:20%;
+    left:15%;
   }
 
   .carImageExterior {
@@ -613,6 +636,15 @@ $Path : "/peugeot/208";
     top:30%;
     left: -5px;
   }
+  .container-menu301 {
+    display: block;
+    width: 300px;
+    height: auto;
+    position: fixed;
+    z-index: 9;
+    top:30%;
+    left:88%;
+  }
   #menu ul {
     list-style-type: none;
     margin: 0;
@@ -639,6 +671,23 @@ $Path : "/peugeot/208";
   #menu ul li a:hover {
     padding-left: 50px;
   }
+  #menu.container-menu301 ul li p {
+    border: .5px solid white;
+    width: 60px;
+    margin: 0 0 0 30%;
+  }
+  #menu.container-menu301 ul li a {
+    font-size: 12px;
+    color:white;
+    padding-left: -60px;
+    text-decoration: none;
+  }
+  #menu.container-menu301 ul li a.active {
+    padding-left: 0px;
+  }
+  #menu.container-menu301 ul li a:hover {
+    padding-left: 0px;
+  }
   /*BOTONES ICONOS*/
   div#optionsIcons.container-buttons-options {
     position: fixed;
@@ -661,8 +710,13 @@ $Path : "/peugeot/208";
     left: 25%;
     z-index: 9;
   }
-
-
+  .dieselImg301 {
+    width: 50%;
+    position: absolute;
+    top:90%;
+    left: 20%;
+    z-index: 9;
+  }
   .nodisplay {
     display: none;
   }
@@ -1591,6 +1645,161 @@ slideCar301
 	}
 	95%{
 		-webkit-transform: translateX(-2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+/*
+==============================================
+fadeInCar
+==============================================
+*/
+
+.fadeInCar {
+	animation-name: fadeInCar;
+	-webkit-animation-name: fadeInCar;	
+
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes fadeInCar {
+	0% {
+		opacity: 0.0;		
+	}
+	60% {
+		opacity: 0.4;			
+	}
+	80% {
+		opacity: 0.8;	
+	}	
+	100% {
+		opacity: 1;	
+	}		
+}
+/*
+==============================================
+slideLeft
+==============================================
+*/
+
+
+.slideLeft{
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+	}
+	50%{
+		transform: translateX(-8%);
+	}
+	65%{
+		transform: translateX(4%);
+	}
+	80%{
+		transform: translateX(-4%);
+	}
+	95%{
+		transform: translateX(2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(150%);
+	}
+	50%{
+		-webkit-transform: translateX(-8%);
+	}
+	65%{
+		-webkit-transform: translateX(4%);
+	}
+	80%{
+		-webkit-transform: translateX(-4%);
+	}
+	95%{
+		-webkit-transform: translateX(2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+/*
+==============================================
+slideLeftCar
+==============================================
+*/
+
+
+.slideLeftCar{
+	animation-name: slideLeftCar;
+	-webkit-animation-name: slideLeftCar;	
+
+	animation-duration: 1.6s;	
+	-webkit-animation-duration: 1.6s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeftCar {
+	0% {
+		transform: translateX(150%);
+	}
+	50%{
+		transform: translateX(-8%);
+	}
+	65%{
+		transform: translateX(4%);
+	}
+	80%{
+		transform: translateX(-4%);
+	}
+	95%{
+		transform: translateX(2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideLeftCar {
+	0% {
+		-webkit-transform: translateX(150%);
+	}
+	50%{
+		-webkit-transform: translateX(-8%);
+	}
+	65%{
+		-webkit-transform: translateX(4%);
+	}
+	80%{
+		-webkit-transform: translateX(-4%);
+	}
+	95%{
+		-webkit-transform: translateX(2%);
 	}			
 	100% {
 		-webkit-transform: translateX(0%);

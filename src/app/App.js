@@ -4,6 +4,7 @@ import Home from './views/Home';
 import Header from './components/Header';
 import Form from './components/Form';
 import Car208 from './views/Car208';
+import Car301 from './views/Car301';
 import Exterior208 from './views/Exterior208';
 import Interior208 from './views/Interior208';
 import Seguridad208 from './views/Seguridad208';
@@ -22,6 +23,8 @@ class App extends Component {
                   <Route path={ '/Peugeot-Interior-208'} component={ Interior208 } />
                   <Route path={ '/Peugeot-Seguridad-208'} component={ Seguridad208 } />
                   <Route path={ '/Peugeot-Cumple'} component={ PeCumple } />
+
+                  <Route path={ '/Peugeot301'} component={ Car301 } />
                </Switch>
                <Header />
                <Form />

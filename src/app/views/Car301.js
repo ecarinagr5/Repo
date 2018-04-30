@@ -5,25 +5,25 @@ import Menu from '../components/Menu';
 import Leyendas from '../components/Leyendas';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-class Car208 extends Component {
+class Car301 extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title208 : '../app/content/img/titleMAX208.png',
-            minititle :'../app/content/img/minititle208.png',
-            Car208:
+            title301 : '../app/content/img/peugeot301.png',
+            minititle :'../app/content/img/minititle301.png',
+            Car301:
             [
-                '../app/content/img/208gris.png',
-                '../app/content/img/208orange.png',
-                '../app/content/img/208blanco.png',
-                '../app/content/img/208rojo.png'
+                '../app/content/img/peugeot301car.png',
+                '../app/content/img/peugeot301car.png',
+                '../app/content/img/peugeot301car.png',
+                '../app/content/img/peugeot301car.png'
             ],
             icons:
             [
                 '../app/content/img/precioIcono.png',
                 '../app/content/img/accesoriosIcono.png',
                 '../app/content/img/gamaIcono.png',
-                '../app/content/img/diesel.png'
+                '../app/content/img/rendimiento-301.png'
             ],
             accesorios:
             [
@@ -93,28 +93,28 @@ class Car208 extends Component {
    render() { 
     const rutaBase = '/'; /*Para prod debe ir / */ 
       return (
-        <div id="body-container" className="background208 pullDown">
+        <div id="body-container" className="background301 pullDown">
+         <Menu />
             <div className="maxWidthAvailable">
-                <div id="car208" className="car-container fadeInCar">
-                    <img className="titleMax208 fadeIn" src={ rutaBase + this.state.title208 } alt="Peogeut 208" />
-                    <img className="minititle" src={ rutaBase + this.state.minititle } alt="Peogeut 208" />
-                    <img id="car-uno" className="carImage slideCar" src={ rutaBase + this.state.Car208[0]}  alt="Peogeut 208" />
-                    <img id="car-dos" className="carImage slideCar" src={ rutaBase + this.state.Car208[1]} alt="Peogeut 208" />
-                    <img id="car-tres" className="carImage slideCar" src={ rutaBase + this.state.Car208[2]} alt="Peogeut 208" />
-                    <img id="car-cuatro" className="carImage slideCar" src={ rutaBase + this.state.Car208[3]} alt="Peogeut 208" />
-                    <Menu />
+                <div id="car208" className="car-container301">
+                    <img className="titleMax208 fadeIn" src={ rutaBase + this.state.title301 } alt="Peugeot 301" />
+                    <img className="minititle" src={ rutaBase + this.state.minititle } alt="Peugeot 301" />
+                    <img id="car-uno" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[0]}  alt="Peogeut 301" />
+                    <img id="car-dos" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[1]} alt="Peogeut 301" />
+                    <img id="car-tres" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[2]} alt="Peogeut 301" />
+                    <img id="car-cuatro" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[3]} alt="Peogeut 301" />
                 <div id="optionsIcons" className="container-buttons-options">
                     <div className="ico" onClick={() => this.handleClick('icon', 1)}>
-                        <img src={ rutaBase + this.state.icons[0] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[0] } alt="Peugeot 301"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 2)} >
-                        <img src={ rutaBase + this.state.icons[1] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[1] } alt="Peugeot 301"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 3)}>
-                        <img src={ rutaBase + this.state.icons[2] } alt="Peugeot 208"/>
+                        <img src={ rutaBase + this.state.icons[2] } alt="Peugeot 301"/>
                     </div>
                     <div>
-                        <img className="dieselImg" src={ rutaBase + this.state.icons[3] } alt="Peugeot 208" />
+                        <img className="dieselImg301" src={ rutaBase + this.state.icons[3] } alt="Peugeot 301" />
                     </div>
                 </div>
                 <div id="iconsInfo" >
@@ -125,7 +125,7 @@ class Car208 extends Component {
                     </div>
                     <div id="info-dos" className="icons-content slideRight">
                         <div className="container-items">
-                            <img src={ rutaBase + this.state.accesorios[0] } alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.accesorios[0] } alt="Peugeot 301" />
                             <span>
                                 <h3>Rin Titan Negros</h3>
                                 <br />
@@ -134,27 +134,27 @@ class Car208 extends Component {
                             </span>
                         </div>
                         <div className="container-items">
-                                <img src={ rutaBase + this.state.accesorios[1] } alt="Peugeot 208" />
+                                <img src={ rutaBase + this.state.accesorios[1] } alt="Peugeot 301" />
                                 <span><b>Yellow Lime</b></span>
                         </div>
                         <div className="container-items">
-                                <img src={ rutaBase + this.state.accesorios[2] } alt="Peugeot 208" />
+                                <img src={ rutaBase + this.state.accesorios[2] } alt="Peugeot 301" />
                                 <span><b>Menthol</b></span>
                         </div>
                     </div>
                     <div id="info-tres" className="icons-content slideRight">
-                            <img src={ rutaBase + this.state.colorcar[0] } onClick={() => this.handleCar(0) } alt="Peugeot 208" />
-                            <img src={ rutaBase + this.state.colorcar[1] } onClick={() => this.handleCar(1)} alt="Peugeot 208" />
-                            <img src={ rutaBase + this.state.colorcar[2] } onClick={() => this.handleCar(2)}alt="Peugeot 208" />
-                            <img src={ rutaBase + this.state.colorcar[3] } onClick={() => this.handleCar(3)} alt="Peugeot 208" />
+                            <img src={ rutaBase + this.state.colorcar[0] } onClick={() => this.handleCar(0) } alt="Peugeot 301" />
+                            <img src={ rutaBase + this.state.colorcar[1] } onClick={() => this.handleCar(1)} alt="Peugeot 301" />
+                            <img src={ rutaBase + this.state.colorcar[2] } onClick={() => this.handleCar(2)}alt="Peugeot 301" />
+                            <img src={ rutaBase + this.state.colorcar[3] } onClick={() => this.handleCar(3)} alt="Peugeot 301" />
                     </div>
                     </div>
                     </div>
                 </div>
-            <BtnCar301 />
+            <BtnCar208 />
             <Leyendas />
         </div>
       );
    }
 }
-export default Car208;
+export default Car301;

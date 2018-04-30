@@ -94,10 +94,10 @@ class PeCumple extends Component {
    render() { 
     const rutaBase = ''; /*Para prod debe ir / */  
       return (
-        <div id="body-container">
+        <div id="body-container" className="background208">
             <div className="maxWidthAvailable">
                 <div id="car208" className="car-container pullDown">
-                    <h2 className="titleCumple">PEUGEOT CUMPLE</h2>
+                    <h2 className="titleCumple slideUp">PEUGEOT CUMPLE</h2>
                     <iframe className="videoCumple" src="https://www.youtube.com/embed/ujq2FQ_6Ilo?controls=1&showinfo=0&rel=0&autoplay=0&loop=1" frameborder="0" allow="autoplay; encrypted-media" />
                     <Description />
                     <Menu />

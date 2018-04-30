@@ -31,7 +31,7 @@ class Description extends Component {
             );
         } else if ( window.location.href === path + '/Peugeot-Seguridad-208' ) {
             return(
-                <div className="title-seguridad">
+                <div className="title-seguridad fadeIn">
                     <h2>SEGURIDAD</h2>
                     <p>* Cruise Control <br />
                         * Programa Dinámico de Estabilidad (ESP) <br />
@@ -41,7 +41,7 @@ class Description extends Component {
             );
         } else if ( window.location.href === path + '/Peugeot-Cumple' ) {
             return(
-                <div className="cumple-description">
+                <div className="cumple-description fadeIn">
                     <p>En Peugeot estamos seguros de la atención y 
                         profesionalismo del servicio post-venta que ofrecemos a 
                         nuestros clientes, por eso:</p>
