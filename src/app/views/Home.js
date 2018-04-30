@@ -7,8 +7,8 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-             title208 : '../app/content/img/title208.png',
-             title301 :'../app/content/img/title301.png',
+             title208 :'../app/content/img/title208.png',
+             title301 :'../app/content/img/peugeot301.png',
              imgCar208:'../app/content/img/car208.png',
              imgCar301:'../app/content/img/car301.png',
         };
@@ -23,13 +23,13 @@ class Home extends Component {
         <div className="maxWidthAvailable">
             <div style = { sidea } className="col-6 sidea container-shadow"> 
                 <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 208" />
-                <Link to="/Peogeut208">
+                <Link to="/Peugeot208">
                     <img className="imgCar208 pullDown" src={this.state.imgCar208} alt="Peugout 208"/>
                 </Link>
             <BtnCar208 />
             </div>
             <div style = { sidea } className="col-6 sideb container-shadowb">  
-                <img className="titleCars fadeIn" src={this.state.title208} alt="Peugout 301" />
+                <img className="titleCars fadeIn" src={this.state.title301} alt="Peugout 301" />
                 <img  className="imgCar pullDown" src={this.state.imgCar301} alt="Peugout 301"/>
             </div> 
             <BtnCar301 />

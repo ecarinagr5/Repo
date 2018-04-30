@@ -14,9 +14,9 @@ class App extends Component {
             <div>
                <Switch>
                   <Route path='/' exact component={ Home } />
-                  <Route path='/Peogeut208' component={ Car208 } />
-                  <Route path='/Peogeut-Exterior-208' component={ Exterior208 } />
-                  <Route path='/Peogeut-Interior-208' component={ Interior208 } />
+                  <Route path='/Peugeot208' component={ Car208 } />
+                  <Route path='/Peugeot-Exterior-208' component={ Exterior208 } />
+                  <Route path='/Peugeot-Interior-208' component={ Interior208 } />
                </Switch>
                <Header />
                <Form />

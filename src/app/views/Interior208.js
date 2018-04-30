@@ -64,8 +64,7 @@ class Interior208 extends Component {
                 <div id="car208" className="interior-container pullDown">
                 <div className="video-background">
                     <div className="video-foreground">
-                      {/*<iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen />*/}
-                      <iframe src="https://www.youtube.com/embed/_g_L-44JYss?controls=0&showinfo=0&rel=0&autoplay=0&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen />
+                      <iframe src="https://www.youtube.com/embed/_g_L-44JYss?controls=1&showinfo=0&rel=0&autoplay=0&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen />
                     </div>
                 </div>               
                     <Menu />
@@ -109,10 +108,10 @@ class Interior208 extends Component {
                         </div>
                     </div>
                     <div id="info-tres" className="icons-content slideRight">
-                           <Link to="/Peogeut208"> <img src={ this.state.colorcar[0] } alt="Peugeot 208" /></Link>
-                           <Link to="/Peogeut208"><img src={ this.state.colorcar[1] } alt="Peugeot 208" /></Link>
-                           <Link to="/Peogeut208"><img src={ this.state.colorcar[2] } alt="Peugeot 208" /></Link>
-                           <Link to="/Peogeut208"><img src={ this.state.colorcar[3] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"> <img src={ this.state.colorcar[0] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"><img src={ this.state.colorcar[1] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"><img src={ this.state.colorcar[2] } alt="Peugeot 208" /></Link>
+                           <Link to="/Peugeot208"><img src={ this.state.colorcar[3] } alt="Peugeot 208" /></Link>
                     </div>
                     </div>
                     </div>

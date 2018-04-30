@@ -5,7 +5,10 @@ import $ from 'jquery';
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: 0};
+    this.state = {
+      value: 0,
+      open:'../app/content/img/vive.png'
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -39,7 +42,7 @@ class Form extends Component {
     return (
           <div>
             <div id="logo-footer" onClick={ this.handleClick }>
-              <span>¡VIVE LA EXPERIENCIA!</span>
+              <img src={ this.state.open } alt="Vive la experiencia Peugeot" />
               <br />
               <img src={arrow} alt="arrow"/>
           </div>
@@ -56,7 +59,7 @@ class Form extends Component {
                     <p className="radioBtn"><input type="radio" name="modelo" value="301"/><label >301</label></p>
                     <p className="campoladoc">Consecionario<br/>
                     <select>
-                           {sucursales}
+                        { sucursales }
                     </select>
                 </p>
                 <p className="privacidad"><input type="checkbox" name="privacidad" value="acepto" checked />

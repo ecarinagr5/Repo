@@ -89,16 +89,12 @@ class Exterior208 extends Component {
     }
 
    render() { 
+    let path = window.location.origin;
+       console.log("dd", )
       return (
-        <div id="body-container">
+        <div id="body-container" className={`${ window.location.href === path +  '/Peogeut208' ? 'active' : ''}`}>
             <div className="maxWidthAvailable">
                 <div id="car208" className="car-container pullDown">
-                    <div className="description-exterior">
-                        <h3>Sii</h3>
-                        <p>El Peogeut 208 GT es un concentrado de estilo y deportividad. 
-                            Tanto por su línea como por el cuidado de cada detalle, este
-                            deportivo despierta el mito GT de manera contemporánea.</p>
-                    </div>
                     <img id="car-uno" className="carImageExterior slideCar" src={ this.state.Car208[0]}  alt="Peogeut 208" />
                     <img id="car-dos" className="carImageExterior slideCar" src={ this.state.Car208[1]} alt="Peogeut 208" />
                     <img id="car-tres" className="carImageExterior slideCar" src={ this.state.Car208[2]} alt="Peogeut 208" />
