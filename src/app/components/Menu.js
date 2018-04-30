@@ -22,9 +22,9 @@ class Menu extends Component {
                     <a className={`${ window.location.href === path +  '/Peugeot-Interior-208' ? 'active' : ''}`} href=""> INTERIOR</a><p></p>
                 </li>
             </Link>
-            <Link to="">
+            <Link to="/Peugeot-Seguridad-208">
                 <li className="btn">
-                    <a className={`${ window.location.href === path +  '/' ? 'active' : ''}`} href=""> SEGURIDAD</a><p></p>
+                    <a className={`${ window.location.href === path +  '/Peugeot-Seguridad-208' ? 'active' : ''}`} href=""> SEGURIDAD</a><p></p>
                 </li>
             </Link>
             <Link to="">
