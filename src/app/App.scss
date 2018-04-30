@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-//Vars
-$Path : "";
+//Var
+$assetPath : "";
 
 * {
     box-sizing: border-box;
@@ -228,6 +228,7 @@ $Path : "";
   }
   #btn-form {
     text-align: center;
+    cursor: pointer;
   }
   
   .btn-pruebamanejo {
@@ -242,6 +243,11 @@ $Path : "";
     text-decoration: none;
     font-size: 13px;
   }
+  .btn-pruebamanejo:hover {
+    -webkit-box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -2px 0px 5px 0px rgba(0,0,0,0.75);
+  }
   
   #btn-link {
     text-align: center;
@@ -251,6 +257,10 @@ $Path : "";
   .btn-cotiza {
     font-size: 13px;
     color: rgb(0, 98, 196);
+    text-decoration: underline;
+  }
+  .btn-cotiza:hover {
+    text-decoration: none;
   }
   .campoladob {
     padding: 20px 0;
@@ -901,6 +911,24 @@ $Path : "";
   #divPopup p {
     padding: 5%;
     background: white;
+  }
+  .alert-error {
+    margin: 15px 0;
+    padding: 4px;
+    color: #a94442;
+  }
+  .error {
+    text-align: center;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    font-size: 16px;
+    position: absolute;
+    top:5%;
+    left: 40%;
   }
   /*
 ==============================================

@@ -9,6 +9,7 @@ class Form extends Component {
       open:'../app/content/img/vive.png'
     };
     this.handleClick = this.handleClick.bind(this);
+    this.sendForm = this.sendForm.bind(this);
   }
 
   handleClick = () => {
@@ -23,6 +24,21 @@ class Form extends Component {
     }
     });
 }
+
+sendForm = () => {
+  /* Validaciones */
+  let name = document.forms["myForm"]["fname"].value;
+  let apellido = document.forms["myForm"]["fapellido"].value;
+
+  if (name === "") {
+     document.getElementById("validateName").innerHTML = 'Completa este campo';
+      return false;
+  }  
+  if (apellido === "") {
+    document.getElementById("validateApellido").innerHTML = 'Completa este campo';
+  }
+}
+
 
 
   render() {
@@ -47,10 +63,12 @@ class Form extends Component {
               <br />
               <img src={rutaBase + arrow} alt="arrow"/>
           </div>
+          <form id="myForm">
           <div id="footer-container" ref="footer-container">
+          <p id="alert-error" className="error"></p>
             <div className="col-6 content-form sideleft">
-                <p className="campolado"><label>Nombre(s) </label><br/><input type="text" name="fname" placeholder="Nombre"/></p>
-                <p className="campolado"><label>Apellido</label><br/><input type="text" name="fapellido" placeholder="Apellido"/></p>
+                <p className="campolado"><label>Nombre(s) </label><br/><input type="text" name="fname" placeholder="Nombre"/><span id="validateName" className="alert-error"></span></p>
+                <p className="campolado"><label>Apellido</label><br/><input type="text" name="fapellido" placeholder="Apellido"/><br /><span id="validateName" className="alert-error"></span></p>
                 <p className="campo"><label>Teléfono</label><br/><input type="text" placeholder="(000) 000000-0000" name="ftelefono"/></p>
                 <p className="campo"><label>Correo electrónico</label><br/><input type="text" placeholder="correo@mail.com" name="fcorreo"/></p>
             </div>
@@ -66,13 +84,14 @@ class Form extends Component {
                 <p className="privacidad"><input type="checkbox" name="privacidad" value="acepto" checked />
                     <label><br/>Acepto las politicas de privacidad</label></p>
             </div>
-            <div id="btn-form">
-                    <a href="#prueba" className="btn-pruebamanejo">¡QUIERO MI PRUEBA DE MANEJO!</a>
+            <div id="btn-form" onClick={this.sendForm}>
+                    <span className="btn-pruebamanejo">¡QUIERO MI PRUEBA DE MANEJO!</span>
             </div>
             <div id="btn-link">
-                    <a href="#prueba" className="btn-cotiza">Quiero una cotización</a>
+                    <a href="https://www.psafinancemexico.com.mx/administracion/cotizador/cotizador.php" target="_blank" className="btn-cotiza">Quiero una cotización</a>
             </div>
         </div>
+       </form>
       </div>
     );
   }
