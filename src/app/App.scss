@@ -814,6 +814,37 @@
   .title-seguridad p {
     line-height: 1.6;
   }
+  .cumple-description {
+    text-align: center;
+    font-size: 12px;
+    margin: -8% 0 0;
+  }
+  .titleCumple {
+    color:white;
+    position: absolute;
+    top:15%;
+    left: 22%;
+    font-size: 60px;
+  }
+  .videoCumple {
+    position: absolute;
+    top:27%;
+    left: 53%;
+    width: 35%;
+    height: 30%;
+  }
+  #divPopup {
+    text-align: justify;
+    font-size:11px;
+    overflow: scroll;
+  }
+  #divPopup h2 {
+    text-align: center;
+  }
+  #divPopup p {
+    padding: 5%;
+    background: white;
+  }
   /*
 ==============================================
 Animaciones
