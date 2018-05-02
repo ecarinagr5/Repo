@@ -19,9 +19,9 @@ class Interior208 extends Component {
             ],
             icons:
             [
-                '../app/content/img/precioIcono.png',
-                '../app/content/img/accesoriosIcono.png',
-                '../app/content/img/gamaIcono.png',
+                '../app/content/img/ico-precio.png',
+                '../app/content/img/ico-personalizacion.png',
+                '../app/content/img/ico-colores.png',
                 '../app/content/img/diesel.png'
             ],
             accesorios:
