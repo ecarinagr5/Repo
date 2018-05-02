@@ -3,9 +3,10 @@ import BtnCar208 from '../components/BtnCar208';
 import BtnCar301 from '../components/BtnCar301';
 import Menu from '../components/Menu';
 import Leyendas from '../components/Leyendas';
+import Description from '../components/description';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-class Car301 extends Component {
+class Seguridad301 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -93,28 +94,28 @@ class Car301 extends Component {
    render() { 
     const rutaBase = '/'; /*Para prod debe ir / */ 
       return (
-        <div id="body-container" className="background301 pullDown">
-         <Menu />
+        <div id="body-container" className="backgroundblack pullDown">
             <div className="maxWidthAvailable">
-                <div id="car208" className="car-container301">
-                    <img className="titleMax208 fadeIn" src={ rutaBase + this.state.title301 } alt="Peugeot 301" />
-                    <img className="minititle" src={ rutaBase + this.state.minititle } alt="Peugeot 301" />
-                    <img id="car-uno" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[0]}  alt="Peogeut 301" />
-                    <img id="car-dos" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[1]} alt="Peogeut 301" />
-                    <img id="car-tres" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[2]} alt="Peogeut 301" />
-                    <img id="car-cuatro" className="carImage301 slideLeftCar" src={ rutaBase + this.state.Car301[3]} alt="Peogeut 301" />
+            <div id="car208" className="interior-container pullDown">
+                <Description />
+                <div className="video-background">
+                    <div className="video-foreground">
+                        <iframe src="https://www.youtube.com/embed/5f9X8vZRPI8?controls=1&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen />
+                    </div>
+                </div>               
+                    <Menu />
                 <div id="optionsIcons" className="container-buttons-options">
                     <div className="ico" onClick={() => this.handleClick('icon', 1)}>
-                        <img src={ rutaBase + this.state.icons[0] } alt="Peugeot 301"/>
+                        <img src={ rutaBase + this.state.icons[0] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 2)} >
-                        <img src={ rutaBase + this.state.icons[1] } alt="Peugeot 301"/>
+                        <img src={ rutaBase + this.state.icons[1] } alt="Peugeot 208"/>
                     </div>
                     <div className="ico" onClick={() => this.handleClick('icon', 3)}>
-                        <img src={ rutaBase + this.state.icons[2] } alt="Peugeot 301"/>
+                        <img src={ rutaBase + this.state.icons[2] } alt="Peugeot 208"/>
                     </div>
                     <div>
-                        <img className="dieselImg301" src={ rutaBase + this.state.icons[3] } alt="Peugeot 301" />
+                        <img className="dieselImg301" src={ rutaBase + this.state.icons[3] } alt="Peugeot 208" />
                     </div>
                 </div>
                 <div id="iconsInfo" >
@@ -143,10 +144,10 @@ class Car301 extends Component {
                         </div>
                     </div>
                     <div id="info-tres" className="icons-content slideRight">
-                            <img src={ rutaBase + this.state.colorcar[0] } onClick={() => this.handleCar(0) } alt="Peugeot 301" />
-                            <img src={ rutaBase + this.state.colorcar[1] } onClick={() => this.handleCar(1)} alt="Peugeot 301" />
-                            <img src={ rutaBase + this.state.colorcar[2] } onClick={() => this.handleCar(2)}alt="Peugeot 301" />
-                            <img src={ rutaBase + this.state.colorcar[3] } onClick={() => this.handleCar(3)} alt="Peugeot 301" />
+                        <Link to="/Peugeot301"> <img src={ rutaBase + this.state.colorcar[0] } alt="Peugeot 301" /> </Link>
+                        <Link to="/Peugeot301"> <img src={ rutaBase + this.state.colorcar[1] } alt="Peugeot 301" /></Link>
+                        <Link to="/Peugeot301"> <img src={ rutaBase + this.state.colorcar[2] } alt="Peugeot 301" /></Link>
+                        <Link to="/Peugeot301"> <img src={ rutaBase + this.state.colorcar[3] } alt="Peugeot 301" /></Link>
                     </div>
                     </div>
                     </div>
@@ -157,4 +158,4 @@ class Car301 extends Component {
       );
    }
 }
-export default Car301;
+export default Seguridad301;

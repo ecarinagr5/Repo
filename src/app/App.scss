@@ -105,14 +105,14 @@ $assetPath : "";
   #body-container {
     margin: 0 auto;
   }
-html {
-    background: #cc2b00;
-  }
   .background208 {
     background: #cc2b00;
   }
   .background301 {
     background: #9fa7ac;
+  }
+  .backgroundblack {
+    background: black;
   }
   .sidea {
     background: #cc2b00;
@@ -598,11 +598,11 @@ html {
     left:25%;
   }
   .carImage301 {
-    width: 70%;
+    width: 50%;
     position: absolute;
     z-index: 9;
-    top:20%;
-    left:15%;
+    top:25%;
+    left:25%;
   }
 
   .carImageExterior {
@@ -977,6 +977,28 @@ html {
     top:5%;
     left: 40%;
   }
+  /*301 Cambios*/
+ .carImageExterior301 {
+  width: 45%;
+  position: absolute;
+  z-index: 9;
+  top:28%;
+  left:45%;
+}
+.mini-titleExterior301 {
+  width: 45%;
+  padding: 0%;
+}
+
+.description-exterior .exterior-content301 {
+  margin: 18% 0 0 0;
+}
+.description-exterior .exterior-content301 p {
+  margin: 5% 0;
+  text-align: justify;
+  padding: 0 20% 0 0;
+
+}
   /*
 ==============================================
 Animaciones

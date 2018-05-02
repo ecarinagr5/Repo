@@ -52,24 +52,24 @@ class Menu extends Component {
                     <a className={`${ window.location.href === this.path +  '/Peugeot301' ? 'active' : ''}`} href=""> PEUGEOT 301</a><p></p>
                 </li>
             </Link>
-            <Link to={ rutaBase + "/Peugeot301" }>
+            <Link to={ rutaBase + "/Peugeot-Exterior-301" }>
                 <li className="btn">
                     <a className={`${ window.location.href === this.path +  '/Peugeot-Exterior-301' ? 'active' : ''}`} href=""> EXTERIOR</a><p></p>
                 </li>
             </Link>
-            <Link to={ rutaBase + "/Peugeot301" }>
+            <Link to={ rutaBase + "/Peugeot-Interior-301" }>
                 <li className="btn">
                     <a className={`${ window.location.href === this.path +  '/Peugeot-Interior-301' ? 'active' : ''}`} href=""> INTERIOR</a><p></p>
                 </li>
             </Link>
-            <Link to= {rutaBase + "/Peugeot301" }>
+            <Link to= {rutaBase + "/Peugeot-Seguridad-301" }>
                 <li className="btn">
                     <a className={`${ window.location.href === this.path +  '/Peugeot-Seguridad-301' ? 'active' : ''}`} href=""> SEGURIDAD</a><p></p>
                 </li>
             </Link>
-            <Link to="/Peugeot-Cumple">
+            <Link to="/Peugeot-Cumple-301">
                 <li className="btn">
-                    <a className={`${ window.location.href === this.path +  '/Peugeot-Cumple' ? 'active' : ''}`} href=""> PEUGEOT CUMPLE</a><p></p>
+                    <a className={`${ window.location.href === this.path +  '/Peugeot-Cumple-301' ? 'active' : ''}`} href=""> PEUGEOT CUMPLE</a><p></p>
                 </li>
             </Link>
             </ul>
