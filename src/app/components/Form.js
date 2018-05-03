@@ -29,14 +29,22 @@ sendForm = () => {
   /* Validaciones */
   let name = document.forms["myForm"]["fname"].value;
   let apellido = document.forms["myForm"]["fapellido"].value;
+  let telefono = document.forms["myForm"]["telefono"].value;
+  let email = document.forms["myForm"]["email"].value;
 
   if (name === "") {
      document.getElementById("validateName").innerHTML = 'Completa este campo';
-      return false;
-  }  
+  } 
   if (apellido === "") {
     document.getElementById("validateApellido").innerHTML = 'Completa este campo';
-  }
+  } 
+  if (telefono === "") {
+    document.getElementById("validateTelefono").innerHTML = 'Completa este campo';
+  }  
+  if (email === "") {
+    document.getElementById("validateEmail").innerHTML = 'Completa este campo';
+  } 
+  
 }
 
 
@@ -68,9 +76,9 @@ sendForm = () => {
           <p id="alert-error" className="error"></p>
             <div className="col-6 content-form sideleft">
                 <p className="campolado"><label>Nombre(s) </label><br/><input type="text" name="fname" placeholder="Nombre"/><span id="validateName" className="alert-error"></span></p>
-                <p className="campolado"><label>Apellido</label><br/><input type="text" name="fapellido" placeholder="Apellido"/><br /><span id="validateName" className="alert-error"></span></p>
-                <p className="campo"><label>Teléfono</label><br/><input type="text" placeholder="(000) 000000-0000" name="ftelefono"/></p>
-                <p className="campo"><label>Correo electrónico</label><br/><input type="text" placeholder="correo@mail.com" name="fcorreo"/></p>
+                <p className="campolado"><label>Apellido</label><br/><input type="text" name="fapellido" placeholder="Apellido"/><span id="validateApellido" className="alert-error"></span></p>
+                <p className="campo"><label>Teléfono</label><br/><input type="num" placeholder="(000) 000000-0000" name="telefono"/><span id="validateTelefono" className="alert-error"></span></p>
+                <p className="campo"><label>Correo electrónico</label><br/><input type="text" placeholder="correo@mail.com" name="email"/><span id="validateEmail" className="alert-error"></span></p>
             </div>
             <div className="col-6 content-form sideright">
                 <p className="campoladob"><label>Modelo </label></p>

@@ -19,8 +19,9 @@ import PeCumple301 from './views/PeCumple301';
 class App extends Component {
    render() {
        const rutaBase = '/'; /*Para prod debe ir /*/
+       /*basename={'/peugeot/208'} para liberar en pruebas*/
       return (
-         <Router>
+         <Router> 
             <div>
                <Switch>
                   <Route path={ rutaBase } exact component={ Home } />
