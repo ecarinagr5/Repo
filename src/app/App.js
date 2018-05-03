@@ -23,7 +23,7 @@ class App extends Component {
        const rutaBase = '/'; /*Para prod debe ir /*/
        /*basename={'/peugeot/208'} para liberar en pruebas*/
       return (
-         <Router> 
+         <Router basename={'/peugeot/208'}> 
             <div>
                <Switch>
                   <Route path={ rutaBase } exact component={ Home } />
