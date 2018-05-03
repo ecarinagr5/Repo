@@ -9,7 +9,7 @@ class ThanksPage extends Component {
         width:'100%',
     }
     return (
-      <div id="body-container" >
+      <div id="body-container">
         <div className="maxWidthAvailable" style={style}>
           <div className="container-thanks">
           <h2> Tus datos se enviaron</h2>

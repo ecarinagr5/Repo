@@ -15,6 +15,7 @@ import Interior301 from './views/Interior301';
 import Seguridad301 from './views/Seguridad301';
 import PeCumple301 from './views/PeCumple301';
 import ThanksPage from './views/TanksPage';
+import NotFound from './views/NotFound';
 
 
 class App extends Component {
@@ -38,7 +39,8 @@ class App extends Component {
                   <Route path={ '/Peugeot-Seguridad-301'} component={ Seguridad301 } />
                   <Route path={ '/Peugeot-Cumple-301'} component={ PeCumple301 } />
 
-                     <Route path={ '/Gracias-por-Registrarte'} component={ ThanksPage } />
+                  <Route path={ '/Gracias-por-Registrarte'} component={ ThanksPage } />
+                  <Route path={ '/404'} component={ NotFound } />
                </Switch>
                <Header />
                <Form />
