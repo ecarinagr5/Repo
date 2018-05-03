@@ -21,9 +21,9 @@ import NotFound from './views/NotFound';
 class App extends Component {
    render() {
        const rutaBase = '/'; /*Para prod debe ir /*/
-       /*basename={'/peugeot/208'} para liberar en pruebas*/
+       /*basename={'/peugeot/multimodelo'} para liberar en pruebas*/
       return (
-         <Router basename={'/peugeot/208'}> 
+         <Router> 
             <div>
                <Switch>
                   <Route path={ rutaBase } exact component={ Home } />
