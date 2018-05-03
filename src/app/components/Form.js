@@ -6,10 +6,21 @@ class Form extends Component {
     super(props);
     this.state = {
       value: 0,
-      open:'../app/content/img/vive.png'
+      open:'../app/content/img/vive.png',
+      flag:0
     };
     this.handleClick = this.handleClick.bind(this);
     this.sendForm = this.sendForm.bind(this);
+    this.handleChange =this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    let x;
+    let tellenght = event.target.value.length;
+    if(tellenght >= 9) {
+     x= document.forms["myForm"]["telefono"].value;
+     x.onBlur();
+    }
   }
 
   handleClick = () => {
@@ -26,25 +37,48 @@ class Form extends Component {
 }
 
 sendForm = () => {
+  let contador= 0;
   /* Validaciones */
   let name = document.forms["myForm"]["fname"].value;
   let apellido = document.forms["myForm"]["fapellido"].value;
   let telefono = document.forms["myForm"]["telefono"].value;
   let email = document.forms["myForm"]["email"].value;
+  let modelo = document.forms["myForm"]["modelo"].value;
+  let sucursal = document.getElementById("select").value;
+  let acepto = document.forms["myForm"]["privacidad"].value;
 
   if (name === "") {
      document.getElementById("validateName").innerHTML = 'Completa este campo';
+     contador = contador + 1;
   } 
   if (apellido === "") {
     document.getElementById("validateApellido").innerHTML = 'Completa este campo';
+    contador = contador + 1;
   } 
   if (telefono === "") {
     document.getElementById("validateTelefono").innerHTML = 'Completa este campo';
+    contador = contador + 1;
   }  
   if (email === "") {
     document.getElementById("validateEmail").innerHTML = 'Completa este campo';
+    contador = contador + 1;
   } 
-  
+
+  if (confirm <=0 ) { 
+    console.log("nombre:",name)
+    console.log("apellido:",apellido)
+    console.log("telefono:",telefono)
+    console.log("email:",email)
+    console.log("modelo:",modelo)
+    console.log("sucursal:",sucursal)
+    console.log("acepto:",acepto)
+    console.log("origin:",'allowAll')
+    console.log("contador:",contador)
+  }
+  else {
+    this.setState({flag: 1})
+    document.getElementById("alertError").innerHTML = 'Debes completar todos los campos';
+  }
 }
 
 
@@ -73,11 +107,11 @@ sendForm = () => {
           </div>
           <form id="myForm">
           <div id="footer-container" ref="footer-container">
-          <p id="alert-error" className="error"></p>
+          {this.state.flag === 0 ? '' : <p id="alertError" className="error"></p> }
             <div className="col-6 content-form sideleft">
                 <p className="campolado"><label>Nombre(s) </label><br/><input type="text" name="fname" placeholder="Nombre"/><span id="validateName" className="alert-error"></span></p>
                 <p className="campolado"><label>Apellido</label><br/><input type="text" name="fapellido" placeholder="Apellido"/><span id="validateApellido" className="alert-error"></span></p>
-                <p className="campo"><label>Teléfono</label><br/><input type="num" placeholder="(000) 000000-0000" name="telefono"/><span id="validateTelefono" className="alert-error"></span></p>
+                <p className="campo"><label>Teléfono</label><br/><input type="number" placeholder="(000) 000000-0000" name="telefono" onChange={this.handleChange}/><span id="validateTelefono" className="alert-error"></span></p>
                 <p className="campo"><label>Correo electrónico</label><br/><input type="text" placeholder="correo@mail.com" name="email"/><span id="validateEmail" className="alert-error"></span></p>
             </div>
             <div className="col-6 content-form sideright">
@@ -85,7 +119,7 @@ sendForm = () => {
                     <p className="radioBtn"><input type="radio" name="modelo" value="208"/><label >208</label></p>
                     <p className="radioBtn"><input type="radio" name="modelo" value="301"/><label >301</label></p>
                     <p className="campoladoc">Consecionario<br/>
-                    <select>
+                    <select id="select">
                         { sucursales }
                     </select>
                 </p>
