@@ -15,12 +15,19 @@ class Form extends Component {
   }
 
   handleChange(event) {
-    let x;
     let tellenght = event.target.value.length;
-    if(tellenght >= 9) {
-     x= document.forms["myForm"]["telefono"].value;
-     x.onBlur();
+    if(event.target.name === 'telefono' && tellenght >= 10) {
+      this.refs.email.focus();
+      return (false);
     }
+
+    if(event.target.name === 'email' && event.target.value.indexOf('@')) {
+    this.setState({flag: 1})
+    document.getElementById("alertError").innerHTML = 'Correo electrónico no valido';
+    } else {
+      this.setState({flag: 0})
+    }
+
   }
 
   handleClick = () => {
@@ -37,6 +44,7 @@ class Form extends Component {
 }
 
 sendForm = () => {
+  let redirect = window.location.href + 'Gracias-por-Registrarte';
   let contador= 0;
   /* Validaciones */
   let name = document.forms["myForm"]["fname"].value;
@@ -63,8 +71,7 @@ sendForm = () => {
     document.getElementById("validateEmail").innerHTML = 'Completa este campo';
     contador = contador + 1;
   } 
-
-  if (confirm <=0 ) { 
+  if (contador === 0 ) { 
     console.log("nombre:",name)
     console.log("apellido:",apellido)
     console.log("telefono:",telefono)
@@ -73,7 +80,7 @@ sendForm = () => {
     console.log("sucursal:",sucursal)
     console.log("acepto:",acepto)
     console.log("origin:",'allowAll')
-    console.log("contador:",contador)
+    window.location = redirect;
   }
   else {
     this.setState({flag: 1})
@@ -109,10 +116,10 @@ sendForm = () => {
           <div id="footer-container" ref="footer-container">
           {this.state.flag === 0 ? '' : <p id="alertError" className="error"></p> }
             <div className="col-6 content-form sideleft">
-                <p className="campolado"><label>Nombre(s) </label><br/><input type="text" name="fname" placeholder="Nombre"/><span id="validateName" className="alert-error"></span></p>
-                <p className="campolado"><label>Apellido</label><br/><input type="text" name="fapellido" placeholder="Apellido"/><span id="validateApellido" className="alert-error"></span></p>
-                <p className="campo"><label>Teléfono</label><br/><input type="number" placeholder="(000) 000000-0000" name="telefono" onChange={this.handleChange}/><span id="validateTelefono" className="alert-error"></span></p>
-                <p className="campo"><label>Correo electrónico</label><br/><input type="text" placeholder="correo@mail.com" name="email"/><span id="validateEmail" className="alert-error"></span></p>
+                <p className="campolado"><label>Nombre(s) </label><br/><input ref="nombre" type="text" name="fname" placeholder="Nombre" onChange={this.handleChange}/><span id="validateName" className="alert-error"></span></p>
+                <p className="campolado"><label>Apellido</label><br/><input ref="apellido" type="text" name="fapellido" placeholder="Apellido" onChange={this.handleChange} /><span id="validateApellido" className="alert-error"></span></p>
+                <p className="campo"><label>Teléfono</label><br/><input ref="telefono" type="number" placeholder="(000) 000000-0000" name="telefono" onChange={this.handleChange}/><span id="validateTelefono" className="alert-error"></span></p>
+                <p className="campo"><label>Correo electrónico</label><br/><input ref="email" type="text" placeholder="correo@mail.com" name="email" onChange={this.handleChange}/><span id="validateEmail" className="alert-error"></span></p>
             </div>
             <div className="col-6 content-form sideright">
                 <p className="campoladob"><label>Modelo </label></p>
