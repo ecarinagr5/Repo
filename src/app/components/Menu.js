@@ -9,9 +9,11 @@ class Menu extends Component {
 
     tipoMenu() {       
         const rutaBase = ''; /*Para prod debe ir / */ 
-        if (window.location.href === this.path +  '/Peugeot208' || window.location.href === this.path +  '/Peugeot-Exterior-208'
-        || window.location.href === this.path +  '/Peugeot-Interior-208'       || window.location.href === this.path +  '/Peugeot-Seguridad-208' 
-        || window.location.href === this.path +  '/Peugeot-Cumple') {
+        console.log("dd",window.location.href)
+        console.log("dd",this.path + '/Peugeot208')
+        if (window.location.href === this.path + '/Peugeot208' || window.location.href === this.path +  '/Peugeot-Exterior-208'
+        || window.location.href === this.path + '/Peugeot-Interior-208'|| window.location.href === this.path +  '/Peugeot-Seguridad-208' 
+        || window.location.href === this.path + '/Peugeot-Cumple') {
         return (
             <div>
             <ul id="optionsmenu">
